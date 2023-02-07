@@ -1,0 +1,349 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@jae02546 
+jae02546
+/
+ekinarabe2
+Public
+Cannot fork because you own this repository and are not a member of any organizations.
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+ekinarabe2/index.html
+@jae02546
+jae02546 Update index.html
+Latest commit 9ab3468 last week
+ History
+ 1 contributor
+304 lines (269 sloc)  14.3 KB
+
+<!DOCTYPE html>
+
+<html lang=“ja”>
+
+<head>
+  <meta charset=“UFT-8”>
+  <title>駅並べ2.0</title>
+  <style>
+      body {
+        background: #eeeeee;
+        font-family: Meiryo;
+      }
+      .head {
+        /* border: 1px solid #cccccc; */
+        /* background: #ffffff; */
+        width: 80%;
+        margin: auto;
+        padding: 0 5%;
+        text-align: center;
+      }
+      .text {
+        /* border: 1px solid #cccccc; */
+        /* background: #ffffff; */
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        padding: 0 5%;
+      }
+      .png {
+        /* border: 1px solid #cccccc; */
+        /* background: #ffffff; */
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        padding: 0 5%;
+        text-align: center;
+      }
+    </style>
+</head>
+
+<body>
+
+<div class="head">
+<h1>駅並べ2.0</h1>
+<a href="#top">遊び方</a>
+<a href="#detail">詳細説明</a>
+<a href="#others">その他</a>
+</div>
+
+<div class="text">
+<h2>遊び方</h2>
+<p>「駅並べ2.0」は全国9000駅を路線毎に並べるゲームです。アプリを起動すると最初に地域毎のフォルダ画面が表示されます。地域をタップするとフォルダが開きます。ここでは「関東」をタップしてみます。</p>
+</div>
+<div class="png">
+<img src="manual/folder_init.png" alt="フォルダ" width="50%"/>
+</div>
+
+<div class="text">
+<p>関東フォルダはさらに「JR」「大手私鉄」「その他」に分かれています。ここでは「JR」をタップしてみます。</p>
+</div>
+<div class="png">
+<img src="manual/folder_kanto.png" alt="フォルダ_関東" width="50%"/>
+</div>
+
+<div class="text">
+<p>JRの路線一覧が表示されます。路線をタップすると駅を並べる画面に変わります。ここでは「東海道新幹線」をタップしてみます。</p>
+</div>
+<div class="png">
+<img src="manual/folder_kanto_jr.png" alt="フォルダ_関東_JR" width="50%"/>
+</div>
+
+<div class="text">
+<p>東海道新幹線の駅の一覧が表示されます。最初はランダムに並んでいますので「東京」から「新大阪」までの17駅を路線図の順に並べます。駅の並べ替えは駅名の右側にある「ハンドル（上下の矢印）」をドラッグすることにより行います。</p>
+</div>
+<div class="png">
+<img src="manual/tokaido_sinkansen.png" alt="東海道新幹線" width="50%"/>
+</div>
+
+<div class="text">
+<p>17駅全てを順に並べ終わるとコンプリートです。路線名の下に「complete」と「HH:mm:ss（コンプ時間）」が赤文字で表示されます。</p>
+</div>
+<div class="png">
+<img src="manual/tokaido_sinkansen_comp.png" alt="東海道新幹線_コンプ" width="50%"/>
+</div>
+
+<div class="head">
+<a href="#top">遊び方</a>
+<a href="#detail">詳細説明</a>
+<a href="#others">その他</a>
+</div>
+
+<div class="text">
+<h2 id="detail">詳細説明</h2>
+<h3>フォルダ画面（路線選択画面）</h3>
+<p>アプリ起動後に最初に表示される画面です。地域毎に分かれたフォルダから路線を選択します。路線数は600以上あり2000年以降に廃止された路線と駅が含まれます。</p>
+<p>地域は以下のフォルダに分かれています。</p>
+<ul>
+<li>北海道</li>
+<li>東北（青森、秋田、山形、岩手、宮城、福島）</li>
+<li>関東（東京、神奈川、千葉、埼玉、群馬、栃木、茨木）</li>
+<li>中部（山梨、長野、新潟、富山、石川、福井、岐阜、静岡、愛知、三重）</li>
+<li>近畿（滋賀、京都、奈良、大阪、和歌山、兵庫）</li>
+<li>中国（鳥取、島根、岡山、広島、山口）</li>
+<li>四国（香川、徳島、愛媛、高知）</li>
+<li>九州・沖縄（福岡、佐賀、長崎、大分、熊本、宮崎、鹿児島）</li>
+</ul>
+</div>
+<div class="png">
+<img src="manual/folder.png" alt="フォルダ" width="50%"/>
+</div>
+
+<div class="text">
+<p>各地域は以下のフォルダに分かれています。</p>
+<ul>
+<li>JR</li>
+<li>大手私鉄</li>
+<li>その他</li>
+</ul>
+</div>
+<div class="png">
+<img src="manual/folder2.png" alt="フォルダ2" width="50%"/>
+</div>
+
+<div class="text">
+<p>さらにフォルダを開くと路線の一覧が表示されます。</p>
+</div>
+<div class="png">
+<img src="manual/folder3.png" alt="フォルダ3" width="50%"/>
+</div>
+
+<div class="text">
+<h3>路線画面（並べ替え画面）</h3>
+<p>フォルダ画面で路線を選択すると表示される画面です。路線名と駅名のリストが表示されます。駅名の右側には駅を並べ替えるための「ハンドル（上下の矢印）」があります。</p>
+<p>駅順の基本は起点から終点ですが、逆の場合、駅ナンバリング順、それ以外の場合もあります。また正式な起点から終点以外の駅を含む場合があります。詳しくは<a href="#others">路線データについて</a>をご覧ください。</p>
+<p>路線名、駅名の左側には「Hint」のリンクがあります。リンク先はWikipediaまたは各鉄道事業者のサイトです。駅順が分からない場合のヒントになるサイトです。</p>
+</div>
+<div class="png">
+<img src="manual/line.png" alt="路線画面" width="50%"/>
+</div>
+<div class="text">
+<p>「シャッフル」をタップすると並びを変えることができます。コンプ済みの路線をシャッフルすると再プレイできます。</p>
+</div>
+<div class="png">
+<img src="manual/tokaido_sinkansen_comp_shuffle.png" alt="路線画面_シャッフル" width="50%"/>
+<img src="manual/shuffle.png" alt="シャッフル" width="50%"/>
+</div>
+
+<div class="text">
+<h3>検索</h3>
+<p>フォルダ画面では「虫眼鏡」のタップで任意の文字列を入力し検索することができます。</p>
+</div>
+<div class="png">
+<img src="manual/folder_search.png" alt="フォルダ" width="50%"/>
+<img src="manual/search.png" alt="サーチ" width="50%"/>
+</div>
+<div class="text">
+<p>例えば「大阪」で検索すると以下のような画面になります。検索前の画面に戻すには「X」を2回タップします。</p>
+</div>
+<div class="png">
+<img src="manual/search_oosaka.png" alt="サーチ_大阪" width="50%" />
+</div>
+
+<div class="text">
+<h3>プレイヤー</h3>
+<p>フォルダ画面では「プレイヤー」のタップで5名までのプレイヤーを切り替えてプレイすることができます。プレイヤー名は「ぷれいや1」から「ぷれいや5」となっていますが設定画面から任意のプレイヤー名に変更することができます。</p>
+</div>
+<div class="png">
+<img src="manual/folder_player.png" alt="フォルダ" width="50%"/>
+<img src="manual/player.png" alt="プレイヤー" width="50%"/>
+</div>
+
+<div class="text">
+<h3>オプションメニュー</h3>
+<p>フォルダ画面では「オプションメニュー」のタップで以下の操作ができます。</p>
+<ul>
+<li>コンプ済み検索：コンプ済み路線の一覧が表示されます</li>
+<li>未コンプ検索：未コンプ路線の一覧が表示されます</li>
+<li>検索終了：検索を終了し元の画面に戻ります</li>
+<li>全てのフォルダを閉じる：開いているフォルダを全て閉じます</li>
+<li>プレイ記録：プレイヤー毎のコンプ数が表示されます</li>
+<li>設定：設定画面が開きます</li>
+</ul>
+</div>
+<div class="png">
+<img src="manual/folder_option.png" alt="フォルダ" width="50%"/>
+<img src="manual/option.png" alt="オプション" width="50%"/>
+</div>
+
+<div class="text">
+<h4>コンプ済み検索の例</h4>
+</div>
+<div class="png">
+<img src="manual/search_comp.png" alt="オプション" width="50%"/>
+</div>
+
+<div class="text">
+<h4>プレイ記録の例</h4>
+</div>
+<div class="png">
+<img src="manual/record.png" alt="オプション" width="50%"/>
+</div>
+  
+<div class="text">
+<h3>設定</h3>
+<p>設定画面では以下の設定及び表示ができます。</p>
+<ul>
+<li>プレイヤー名の設定</li>
+<li>効果音の設定</li>
+<li>バイブレーションの設定</li>
+<li>プライバシーポリシーの表示</li>
+<li>このアプリについて（今見ているページ）</li>
+</ul>
+</div>
+<div class="png">
+<img src="manual/setting.png" alt="設定" width="50%"/>
+</div>
+
+<div class="head">
+<a href="#top">遊び方</a>
+<a href="#detail">詳細説明</a>
+<a href="#others">その他</a>
+</div>
+
+<div class="text">
+<h2 id="others">その他</h2>
+
+<h3>路線データについて</h3>
+<p>アプリ内の路線データはネット上の情報（主にWikipediaと各鉄道事業者のサイト）を参考に作成しています。路線分け、路線範囲、路線や駅の名称は正式なものとは異なる場合があります。</p>
+<p>駅順の基本は起点から終点ですが、逆の場合、駅ナンバリング順、それ以外の場合もあります。また正式な起点から終点以外の駅を含む場合があります。例えばJR千歳線の場合、起点は沼ノ端駅、終点は白石駅ですが、アプリ上では苫小牧駅から札幌駅となっており、室蘭本線と函館本線の一部を含みます。</p>
+<p>正式な路線としては存在しない路線も記載しています。例えば、京浜東北線、湘南新宿ライン、秋田新幹線と言う路線は正式にはありませんが、それぞれ停車駅を路線として記載しています。</p>
+<p>同じ区間が複数路線に記載されている場合があります。例えば、熊本市電はA系統とB系統がありますが、辛島町-健軍町は共有していますので両方の路線に記載しています。この場合共有区間はそれぞれ別に並べる必要があります。</p>
+<p>廃線、廃駅は2000年以降に廃線、廃駅となったものを記載しています。ただしアプリ作成者が把握している範囲での記載です。漏れや間違い、休止等の扱いが統一されていない場合もありますがご了承ください。</p>
+<p>2000年以降に鉄道事業者が移管された場合は、路線全体が移管された場合は名称を変更、路線の一部が移管になった場合は、移管元からその区間の駅を削除し移管先に追加しています。例えば、JR山田線の宮古-釜石間は2019年3月に三陸鉄道に移管されていま。この場合、JR山田線からこの区間の駅を削除し三陸鉄道リアス線に追加しています。</p>
+<p>JR気仙沼線とJR大船渡線ですが、BRTとなった区間は廃駅と記載しています。新設されたBRTの駅は記載していません。阿佐海岸鉄道ですがDMVの鉄道モード区間のみ記載しています。新設されたバスモード区間は記載していません。</p>
+
+<h3>効果音</h3>
+<p>以下のサイトで入手した効果音を使用しております。</p>
+<a href="https://taira-komori.jpn.org/index.html" target="_blank" rel="noopener noreferrer">無料効果音で遊ぼう！</a>
+
+<h3>プライバシーポリシー</h3>
+<p>本アプリでは個人情報にアクセスしておりません。またプレイ記録は全て端末内のメモリに保存しており端末外には送信しておりません。 （プレイ記録はアプリをアンインストールすると全て削除されますのでお気を付けください）</p>
+
+<h3>広告について</h3>
+<p>本アプリでは広告配信にAdMob(Google Inc.)を使用しております。AdMobがご利用者様の情報を自動取得する場合がございます。取得する情報や利用目的、第3者への提供などにつきましては、以下の広告配信事業者様のプライバシーポリシーをご確認くださ。</p>
+<a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads?hl=ja</a>
+
+<h3>免責事項</h3>
+<p>本アプリからのリンクやバナーなどで移動したサイトで提供される情報、サービス等について一切の責任を負いません。また本アプリ上の情報は正確性や安全性を保証するものではありません。情報が古くなっていることもございます。本アプリ使用によって生じた損害等の一切の責任を負いかねますのでご了承ください。</p>
+
+<h3>アプリ改版履歴</h3>
+<p>2022-08-23<br>
+  駅並べ2.0 ver.1.5 新着機能、保守機能の変更</p>
+<p>2022-07-01<br>
+  駅並べ2.0 ver.1.4 初版</p>
+    
+<h3>路線データ改版履歴</h3>
+<p>2023-01-31<br>
+  誤記修正（いわて銀河鉄道線線）いわて沼宮内 -> ふりがな、英語 修正<br>
+  駅名変更（名古屋市営地下鉄桜通線）中村区役所 -> 太閤通<br>
+  駅名変更（名古屋市営地下鉄名城線）市役所 -> 名古屋城<br>
+  駅名変更（名古屋市営地下鉄名城線）伝馬町 -> 熱田神宮伝馬町<br>
+  駅名変更（名古屋市営地下鉄名城線）神宮西 -> 熱田神宮西<br>
+  駅名変更（長崎電気軌道2系統）市民会館 -> 市役所<br>
+  駅名変更（長崎電気軌道3系統）市民会館 -> 市役所<br>
+  駅名変更（長崎電気軌道4系統）市民会館 -> 市役所<br>
+  駅名変更（長崎電気軌道5系統）市民会館 -> 市役所</p>
+<p>2022-11-13<br>
+  誤記修正（小野田線 宇部新川駅）<br>
+  ひがししんかわ	-> うべしんかわ<br>
+  Higashi-Shinkawa -> Ube-Shinkawa</p>
+<p>2022-11-12<br>
+  誤記修正（横浜線 町田駅）神奈川 -> 東京</p>
+<p>2022-09-23<br>
+  駅名変更（長崎本線、佐世保線）肥前山口 -> 江北</p>
+<p>2022-09-01<br>
+  西九州新幹線追加、JR大村線更新</p>
+<p>2022-08-13<br>
+「懐かしの路線」フォルダ追加<br>
+「懐かしの路線」フォルダに「北海道（1964年10月）」フォルダ追加<br>
+「北海道（1964年10月）」フォルダに以下3路線を追加</p>
+<ul>
+  <li>函館本線</li>
+  <li>江差線</li>
+  <li>松前線</li>
+  </ul>
+<p>参考文献：JTBのMOOK 時刻表 完全復刻版 1964年10月号 ISBN978-4-533-13649-8</p>
+<p>2022-07-01<br>
+  全国路線データ（2022-07-01現在）</p>
+    
+<h3>連絡先</h3>
+<p>jae02546@gmail.com</p>
+
+</div>
+
+<div class="head">
+<a href="#top">遊び方</a>
+<a href="#detail">詳細説明</a>
+<a href="#others">その他</a>
+</div>
+
+</body>
+
+</html>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+ekinarabe2/index.html at main · jae02546/ekinarabe2
